@@ -32,7 +32,7 @@
             android:id="@+id/textView_Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/blue"
+            android:background="@color/colorblue"
             android:paddingLeft="16dp"
             android:paddingTop="10dp"
             android:paddingRight="16dp"
@@ -106,7 +106,7 @@
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/blue"
+            android:backgroundTint="@color/colorblue"
             android:text="Login"
             android:textSize="20sp" />
 

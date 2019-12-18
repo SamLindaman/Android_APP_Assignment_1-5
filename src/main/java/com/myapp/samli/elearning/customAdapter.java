@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -28,6 +30,16 @@ public class customAdapter extends RecyclerView.Adapter<customAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = layoutInflater.inflate(R.layout.customcardview, parent,false);
 
+        view.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                Fragment myFragment = new CourseFragmentCpp();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.containerCpp, myFragment).addToBackStack(null).commit();
+
+            }
+        });
         return new ViewHolder(view);
     }
 

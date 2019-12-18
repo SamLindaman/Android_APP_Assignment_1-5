@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:background="@color/blue"
+        android:background="@color/colorblue"
         android:textSize="25sp"
         android:paddingTop="10sp"
         android:paddingBottom="10sp"
@@ -31,7 +31,7 @@
         android:layout_below="@+id/TextView_Header"
         android:iconifiedByDefault="false"
         android:queryHint="Search"
-        android:searchHintIcon="@color/gray">
+        android:searchHintIcon="@color/colorgray">
 
     </SearchView>
 
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="40sp"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue"
+        android:background="@color/colorblue"
         android:gravity="bottom"
         android:orientation="horizontal"
         android:visibility="visible">

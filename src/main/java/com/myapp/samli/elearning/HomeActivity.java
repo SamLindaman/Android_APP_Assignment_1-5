@@ -34,17 +34,17 @@ public class HomeActivity extends AppCompatActivity {
         items = new ArrayList<>();
         itemDescription = new ArrayList<>();
 
-        items.add("First");
-        itemDescription.add("info about 1");
-        items.add("Second");
-        items.add("3t");
-        items.add("4");
-        items.add("5");
-        items.add("6");
-        items.add("7");
-        items.add("8");
-        items.add("9");
-        items.add("10");
+        items.add("C++");
+        itemDescription.add("Java");
+        items.add("Data Structure");
+        items.add("UI Design");
+        items.add("Algorithms");
+        items.add("Database Systems");
+        items.add("Discrete Mathematics");
+        items.add("Spoken Chinese");
+        items.add("Computer Organization");
+        items.add("Mobile Application Development");
+        items.add("Computer Networks");
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
