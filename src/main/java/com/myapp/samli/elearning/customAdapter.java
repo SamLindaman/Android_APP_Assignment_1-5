@@ -1,6 +1,7 @@
 package com.myapp.samli.elearning;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,17 +31,27 @@ public class customAdapter extends RecyclerView.Adapter<customAdapter.ViewHolder
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = layoutInflater.inflate(R.layout.customcardview, parent,false);
 
-        view.setOnClickListener(new View.OnClickListener(){
+        final ViewHolder vHolder = new ViewHolder(view);
+
+        vHolder.descriptionTextView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
+                if(String.valueOf(vHolder.getAdapterPosition())!=null) {
+                    if(vHolder.getAdapterPosition()==0) {
+                        Intent intent2 = new Intent(view.getContext(), CPPActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                   } //else if(vHolder.getAdapterPosition()==1){
+//                        Intent intent2 = new Intent(view.getContext(), JavaActivity.class);
+//                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                        view.getContext().startActivity(intent2);
+//                    }
 
-                AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                Fragment myFragment = new CourseFragmentCpp();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.containerCpp, myFragment).addToBackStack(null).commit();
 
+                }
             }
         });
-        return new ViewHolder(view);
+        return vHolder;
     }
 
     @Override
