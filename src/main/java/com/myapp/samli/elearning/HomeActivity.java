@@ -35,7 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         itemDescription = new ArrayList<>();
 
         items.add("C++");
-        itemDescription.add("Java");
+        items.add("Java");
         items.add("Data Structure");
         items.add("UI Design");
         items.add("Algorithms");

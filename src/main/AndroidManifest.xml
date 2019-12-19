@@ -11,6 +11,17 @@
         android:theme="@style/AppTheme">
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".CPPActivity"></activity>
+        <activity android:name=".JavaActivity"></activity>
+        <activity android:name=".AlgorithmsActivity"></activity>
+        <activity android:name=".ComputerNetworksActivity"></activity>
+        <activity android:name=".ComputerOrganizationActivity"></activity>
+        <activity android:name=".DatabaseSystemsActivity"></activity>
+        <activity android:name=".DataStructureActivity"></activity>
+        <activity android:name=".DiscreteMathematicsActivity"></activity>
+        <activity android:name=".MobileApplicationDevelopmentActivity"></activity>
+        <activity android:name=".SpokenChineseActivity"></activity>
+        <activity android:name=".UIDesignActivity"></activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

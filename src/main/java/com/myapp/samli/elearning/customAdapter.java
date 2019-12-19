@@ -41,11 +41,47 @@ public class customAdapter extends RecyclerView.Adapter<customAdapter.ViewHolder
                         Intent intent2 = new Intent(view.getContext(), CPPActivity.class);
                         intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         view.getContext().startActivity(intent2);
-                   } //else if(vHolder.getAdapterPosition()==1){
-//                        Intent intent2 = new Intent(view.getContext(), JavaActivity.class);
-//                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                        view.getContext().startActivity(intent2);
-//                    }
+                   } else if(vHolder.getAdapterPosition()==1){
+                        Intent intent2 = new Intent(view.getContext(), JavaActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==2){
+                        Intent intent2 = new Intent(view.getContext(), DataStructureActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==3){
+                        Intent intent2 = new Intent(view.getContext(), UIDesignActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==4){
+                        Intent intent2 = new Intent(view.getContext(), AlgorithmsActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==5){
+                        Intent intent2 = new Intent(view.getContext(), DatabaseSystemsActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==6){
+                        Intent intent2 = new Intent(view.getContext(), DiscreteMathematicsActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==7){
+                        Intent intent2 = new Intent(view.getContext(), SpokenChineseActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==8){
+                        Intent intent2 = new Intent(view.getContext(), ComputerOrganizationActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==9){
+                        Intent intent2 = new Intent(view.getContext(), MobileApplicationDevelopmentActivity.class);
+                        intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        view.getContext().startActivity(intent2);
+                    }else if(vHolder.getAdapterPosition()==10){
+                    Intent intent2 = new Intent(view.getContext(), ComputerNetworksActivity.class);
+                    intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    view.getContext().startActivity(intent2);
+                }
 
 
                 }
