@@ -95,11 +95,12 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/buttonResetPassword"
+            android:id="@+id/buttonSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="forgot password" />
+            android:onClick="signUpClicked"
+            android:text="sign up"
+            android:textSize="20sp" />
 
 
         <Button
@@ -107,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorblue"
+            android:onClick="loginClicked"
             android:text="Login"
             android:textSize="20sp" />
 
@@ -120,13 +122,14 @@
             android:textSize="200sp" />
 
         <Button
-            android:id="@+id/SignUp"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:foregroundGravity="bottom"
+            android:text="Forgot Password"
             android:textSize="20sp"
-            android:text="Sign Up" />
+            android:visibility="invisible" />
 
 
     </LinearLayout>
