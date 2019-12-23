@@ -1,6 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerdatastructure"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#595B5F"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="181dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/databasesystem" />
+
+        <TextView
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingLeft="25dp"
+            android:text="Database Systems"
+            android:textColor="#ffff"
+            android:textSize="27dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="57dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorblue"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:drawableLeft="@drawable/ic_launcher_background"
+        android:padding="5dp"
+        android:text="Wang Fangshi"
+        android:textColor="#ffff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorblue"
+        android:drawableStart="@android:drawable/ic_menu_my_calendar"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:padding="20dp"
+        android:text="Class Time : Tuesday, Thursday [8:00-10:00]"
+        android:textColor="#ffff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="341dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="#ffff"
+            android:padding="5dp"
+            android:text=" Description"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="351dp"
+            android:background="#ffff"
+            android:isScrollContainer="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="    This course presents the fundamental concepts of database design and use. It provides a study of data models, data description languages, and query facilities including relational algebra and SQL, data normalization, transactions and their properties, physical data organization and indexing, security issues and object databases. It also looks at the new trends in databases, for example, Big Data, MapReduce, and NoSQL. The knowledge of the above topics will be applied in the design and implementation of a database application using a target database management system as part of a semester-long group project. The course covers foundational material in the field of database systems. In this course, we will cover: Basic introductory concepts necessary for a good understanding of database models. Database Management System (DBMS) concepts, terminology, and architecture. Entity relationship modeling and database design. Relational database and SQL for efficiently storing, retrieving, and updating data in a database. File organization on disk, indexing and hashing Concurrency and database recovery, Additionally, the course will cover more advanced topics in database systems, such as Distributed databases, NoSQL storage systems, Big data, MapReduce Basics of MongoDB and Spark. Database Security (if time permits)"
+                    android:textColor="#000000"
+                    android:textSize="13dp"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="#ffff"
+                    android:padding="5dp"
+                    android:text=" Prerequisites"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Data Structures is recommended."
+                    android:textColor="#000000"
+                    android:textSize="13dp"></TextView>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/buttonViewCourses"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your Courses" />
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+
+            android:text="Logout" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Intent intent = new Intent(view.getContext(), HomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         view.getContext().startActivity(intent);
+
         if(userName!=null&&password!=null) {
             Log.i("username",userName);
             ParseUser.logInInBackground(userName, password, new LogInCallback() {

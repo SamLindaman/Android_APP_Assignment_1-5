@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/containerCpp"
+    android:id="@+id/containerjava"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#595B5F"
@@ -18,7 +18,7 @@
             android:layout_width="181dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher" />
+            app:srcCompat="@drawable/java" />
 
         <TextView
             android:layout_width="167dp"
@@ -33,7 +33,7 @@
             android:paddingLeft="25dp"
             android:text="Java"
             android:textColor="#ffff"
-            android:textSize="30dp"
+            android:textSize="27dp"
             android:textStyle="bold" />
 
         <ImageView
@@ -52,9 +52,8 @@
         android:layout_marginBottom="2dp"
         android:background="@color/colorblue"
         android:drawableStart="@drawable/ic_launcher_foreground"
-        android:drawableLeft="@drawable/ic_launcher_background"
         android:padding="5dp"
-        android:text="  Professor : Dr. Seo Kyungseok"
+        android:text="Ma Difang"
         android:textColor="#ffff"
         android:textSize="15dp"
         android:textStyle="bold" />
@@ -66,10 +65,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="1dp"
         android:background="@color/colorblue"
-        android:drawableStart="@drawable/ic_launcher_foreground"
-        android:drawableLeft="@drawable/ic_launcher_foreground"
-        android:padding="5dp"
-        android:text=" Class Time : Friday [0][1]"
+        android:drawableStart="@android:drawable/ic_menu_my_calendar"
+        android:padding="20dp"
+        android:text="Class Time : Tuesday, Thursday[19:00-21:00]"
         android:textColor="#ffff"
         android:textSize="15dp"
         android:textStyle="bold" />
@@ -77,7 +75,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="341dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="15dp"
@@ -110,12 +108,52 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:text=" As the first basic course in the software engineering major, Programming Fundamentals provides the basic knowledge on computers and programming to lay a solid foundation for the freshmen to go on with the related study in the major.\n Through the study in the course, the students will pick up the basic knowledge of the structure of hardware and software, understand the computer dynamic mechanism and master the related concepts on programming. They will acquire the methods of structured programming, practice the skills of programming and observe the programming norms. They will grasp the data types, operators, expressions, control structures, functions, arrays, pointers, structures, files and linked lists of C language programs. They will also be able to debug program independently, thus possess certain ability to solve practical problems."
+                    android:text="This course emphasizes current techniques in object oriented design, analysis, and programming. Such topics as encapsulation, information hiding, inheritance and polymorphism are studied in class assignments and programming exercises. The C++ programming language is utilized along with the UML modeling language. Prerequisites: CSCI 270 or permission of instructor. Student Learning Outcomes (c) An ability to design, implement, and evaluate a computer-based system, process, component, or program to meet desired needs (i) An ability to use current techniques, skills, and tools necessary for computing practice. (k) An ability to apply design and development principles in the construction of software systems of varying complexity. "
+                    android:textColor="#000000"
+                    android:textSize="13dp"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="#ffff"
+                    android:padding="5dp"
+                    android:text=" Prerequisites"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="C Programming"
                     android:textColor="#000000"
                     android:textSize="13dp"></TextView>
             </LinearLayout>
         </ScrollView>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/buttonViewCourses"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your Courses" />
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+
+            android:text="Logout" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,6 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerdatastructure"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#595B5F"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="181dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/datastructure" />
+
+        <TextView
+            android:layout_width="167dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:paddingLeft="25dp"
+            android:text="Data Structure"
+            android:textColor="#ffff"
+            android:textSize="27dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="57dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_menu_add" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorblue"
+        android:drawableStart="@drawable/ic_launcher_foreground"
+        android:padding="5dp"
+        android:text="Ma Difang"
+        android:textColor="#ffff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorblue"
+        android:drawableStart="@android:drawable/ic_menu_my_calendar"
+        android:drawableLeft="@drawable/ic_launcher_foreground"
+        android:padding="20dp"
+        android:text="Class Time : Monday, Wednesday[14:00-16:00]"
+        android:textColor="#ffff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="341dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="#ffff"
+            android:padding="5dp"
+            android:text=" Description"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="351dp"
+            android:background="#ffff"
+            android:isScrollContainer="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Covers the design, analysis, and implementation of data structures and algorithms to solveengineering
+problems using an object‐oriented programming language. Topics include elementary datastructures,
+(including arrays, stacks, queues, and lists), advanced data structures (including trees and graphs),the
+algorithms used to manipulate these structures, and their application to solving practicalengineering
+problems. Pre‐requisite:  GET 2100 or ITC 2100. 1. Address and solve complex broadly‐defined engineering problems related to their disciplineand field of specialization 2. Work as team members, show leadership, and communicate technical concepts andideas effectively 3. Manifest a high level of professional integrity, and make ethical decisions that will havea positive impact on the organization and society 4. Embrace and practice lifelong learning, continue personal growth, and professionalself‐  improvement."
+                    android:textColor="#000000"
+                    android:textSize="13dp"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="#ffff"
+                    android:padding="5dp"
+                    android:text=" Prerequisites"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Object Oriented Progamming"
+                    android:textColor="#000000"
+                    android:textSize="13dp"></TextView>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/buttonViewCourses"
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your Courses" />
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+
+            android:text="Logout" />
+    </LinearLayout>
 
 </LinearLayout>
