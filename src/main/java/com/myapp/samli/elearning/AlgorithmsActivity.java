@@ -1,6 +1,5 @@
 package com.myapp.samli.elearning;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,13 +12,15 @@ public class AlgorithmsActivity extends AppCompatActivity implements View.OnClic
     ImageView addImage;
     TextView title;
     TextView time;
-    boolean added = false;
-
+    public static boolean added = false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_algorithms);
         addImage = findViewById(R.id.imageView4);
+        if(added){
+            addImage.setImageResource(R.drawable.check);
+        }
         title = findViewById(R.id.titleTextView);
         time = findViewById(R.id.timeTextView);
     }
@@ -27,16 +28,10 @@ public class AlgorithmsActivity extends AppCompatActivity implements View.OnClic
     public void addClicked(View view){
         if(!added){
             addImage.setImageResource(R.drawable.check);
+            added = true;
         } else{
             addImage.setImageResource(R.drawable.add);
-
-            title = findViewById(R.id.titleTextView);
-            time = findViewById(R.id.timeTextView);
-            Intent intent = new Intent(AlgorithmsActivity.this, MyClasses.class);
-            intent.putExtra("Title", title.getText().toString());
-            intent.putExtra("Time", time.getText().toString());
-            startActivity(intent);
-
+            added = false;
         }
     }
 

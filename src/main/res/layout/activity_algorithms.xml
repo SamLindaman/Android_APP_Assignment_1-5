@@ -41,6 +41,7 @@
             android:layout_width="57dp"
             android:layout_height="match_parent"
             android:clickable="true"
+            android:onClick="addClicked"
             app:srcCompat="@android:drawable/ic_menu_add" />
 
     </LinearLayout>

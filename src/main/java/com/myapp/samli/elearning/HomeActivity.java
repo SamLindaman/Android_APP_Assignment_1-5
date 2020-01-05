@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,8 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener, SearchView.OnQueryTextListener {
 
     RecyclerView recyclerView;
     customAdapter adapter;
@@ -26,6 +28,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_screen_layout);
 
+        SearchView searchView = findViewById(R.id.searchBar);
+        searchView.setOnQueryTextListener(this);
 
         items = new ArrayList<>();
         itemDescription = new ArrayList<>();
@@ -50,6 +54,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         Button logoutButton = findViewById(R.id.buttonLogout);
     }
 
+    public void yourCoursesClicked(View view){
+        Intent intent = new Intent(view.getContext(), MyClasses.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     public void logoutPressed(View view){
         ParseUser.logOut();
         ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
@@ -64,6 +74,39 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        String userInput = query.toLowerCase();
+        List<String> newList = new ArrayList<>();
+
+        for(String data: items){
+            if(data.toLowerCase().contains(userInput)){
+                newList.add(data);
+            }
+        }
+
+        adapter.updateList(newList);
+
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+
+        String userInput = newText.toLowerCase();
+        List<String> newList = new ArrayList<>();
+
+        for(String data: items){
+            if(data.toLowerCase().contains(userInput)){
+                newList.add(data);
+            }
+        }
+
+        adapter.updateList(newList);
+
+        return true;
     }
 }
 

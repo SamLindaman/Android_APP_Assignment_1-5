@@ -8,10 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class customAdapter extends RecyclerView.Adapter<customAdapter.ViewHolder> {
@@ -25,7 +24,11 @@ public class customAdapter extends RecyclerView.Adapter<customAdapter.ViewHolder
         this.dataDescrip = dataDescrip;
     }
 
-
+    public void updateList(List<String> newList){
+        data = new ArrayList<>();
+        data.addAll(newList);
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

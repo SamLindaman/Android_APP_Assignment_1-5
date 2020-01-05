@@ -39,38 +39,38 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottomMenueBar"
+
         android:layout_below="@id/searchBar">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <LinearLayout
-        android:id="@+id/bottomMenueBar"
-        android:layout_width="match_parent"
-        android:layout_height="40sp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorblue"
-        android:gravity="bottom"
-        android:orientation="horizontal"
-        android:visibility="visible">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/bottomMenueBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40sp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="@color/colorblue"-->
+<!--        android:gravity="bottom"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:visibility="visible">-->
 
 
-        <Button
-            android:id="@+id/buttonHome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Home" />
+<!--        <Button-->
+<!--            android:id="@+id/buttonHome"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Home" />-->
 
-        <Button
-            android:id="@+id/buttonLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:onClick="logoutPressed"
-            android:text="Logout" />
+<!--        <Button-->
+<!--            android:id="@+id/buttonLogout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:onClick="logoutPressed"-->
+<!--            android:text="Logout" />-->
 
-    </LinearLayout>
+
 
 
 </RelativeLayout>
