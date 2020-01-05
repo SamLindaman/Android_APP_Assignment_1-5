@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         passwordEditText = findViewById(R.id.editText_Password);
         loginButton = findViewById(R.id.buttonLogin);
         signUpButton = findViewById(R.id.buttonSignUp);
+        //
+
+        //Enable Parse Database
         // database username: user
         // database password: e6uPFYEglpBE
 
@@ -71,30 +74,27 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
 
 
-
+    //action to take if the signup button is clicked
     public void signUpClicked(View view){
-       // Intent intent = new Intent(view.getContext(), HomeActivity.class);
-        //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        //view.getContext().startActivity(intent);
-        Log.i("Clicked","1");
+       Intent intent = new Intent(view.getContext(), HomeActivity.class);
+       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+       view.getContext().startActivity(intent);
         usernameEditText = findViewById(R.id.editText_ID);
         passwordEditText = findViewById(R.id.editText_Password);
-        Log.i("Clicked","2");
+
+        //makes sure that there is info in the username/password field or send an error.
         if(usernameEditText.getText().toString().matches("") || passwordEditText.getText().toString().matches("")){
             Toast.makeText(this,"Username and password are required.",Toast.LENGTH_SHORT).show();
         } else {
-            Log.i("Clicked","3");
+            //create new parse user in the database
             ParseUser user = new ParseUser();
             user.setUsername(usernameEditText.getText().toString());
-            Log.i("username",usernameEditText.getText().toString());
-            Log.i("password",passwordEditText.getText().toString());
             user.setPassword(passwordEditText.getText().toString());
-            Log.i("Clicked","4");
 
+            //sign the user in
             user.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
-                    Log.i("Clicked","5");
                     if(e == null){
                         Log.i("Signup","Success");
                     } else{
@@ -109,9 +109,9 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         }
     }
 
+    //action to take is the login button is clicked
     public void loginClicked(View view){
 
-        Log.i("Clicked","1");
         usernameEditText = findViewById(R.id.editText_ID);
         passwordEditText = findViewById(R.id.editText_Password);
         final String userName = usernameEditText.getText().toString();
@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         view.getContext().startActivity(intent);
 
-        if(userName!=null&&password!=null) {
+        //make sure there is some info in the username+password fields
+        if(userName!=""&&password!="") {
             Log.i("username",userName);
             ParseUser.logInInBackground(userName, password, new LogInCallback() {
                 @Override
@@ -139,6 +140,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
     }
 
+    //show the home activity
     public void showHome(){
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(intent);

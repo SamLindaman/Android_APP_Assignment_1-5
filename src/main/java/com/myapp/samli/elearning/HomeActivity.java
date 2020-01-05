@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         SearchView searchView = findViewById(R.id.searchBar);
         searchView.setOnQueryTextListener(this);
 
+        //create list of classes and display them in the recycler view
         items = new ArrayList<>();
         itemDescription = new ArrayList<>();
 
@@ -46,6 +47,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         items.add("Mobile Application Development");
         items.add("Computer Networks");
 
+        //send info to recyclr view and adapter
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new customAdapter(this, items, itemDescription);
@@ -54,12 +56,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         Button logoutButton = findViewById(R.id.buttonLogout);
     }
 
+    //show the user their classes
     public void yourCoursesClicked(View view){
         Intent intent = new Intent(view.getContext(), MyClasses.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
+    //log the user out
     public void logoutPressed(View view){
         ParseUser.logOut();
         ParseUser currentUser = ParseUser.getCurrentUser(); // this will now be null
@@ -76,11 +80,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
     }
 
+    //implement the searchbar
     @Override
     public boolean onQueryTextSubmit(String query) {
         String userInput = query.toLowerCase();
         List<String> newList = new ArrayList<>();
 
+        //sends everything to lowercase, so the user can search in caps or lowercase if they want
         for(String data: items){
             if(data.toLowerCase().contains(userInput)){
                 newList.add(data);
@@ -92,6 +98,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         return true;
     }
 
+    //implement search bar
     @Override
     public boolean onQueryTextChange(String newText) {
 

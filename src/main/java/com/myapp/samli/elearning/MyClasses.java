@@ -21,6 +21,8 @@ public class MyClasses extends AppCompatActivity {
         setContentView(R.layout.activity_yourcourses);
 
 
+        //create a new array list, that stores the classes that the user has added
+        //app checks if the user has added the class by a static boolean in the class activity
         items = new ArrayList<>();
         itemDescription = new ArrayList<>();
 
@@ -68,6 +70,7 @@ public class MyClasses extends AppCompatActivity {
             items.add("Computer Networks");
         }
 
+        //send the list of classes to the recycler view and adapter
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new customAdapter(this, items, itemDescription);
